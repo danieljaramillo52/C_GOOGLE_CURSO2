@@ -9,3 +9,6 @@ def rectangule(base, height):
 
 def circle(radious):
         return math.pi * (radious**2)
+
+def square(side):
+        return side * side
