@@ -11,6 +11,11 @@
 7. Ruta directa curso: pwd
 
 cd "/mnt/c/Users/DanielJaramilloBusta/Onedrive - XPERTGROUP S.A.S/Xpert Group Cursos/Certificación Google_automatización_python/Curso 2_python_con_interfaz"
+
+7.1 **Ruta directa al curso desde pc personal:**
+
+cd "/mnt/c/Users/ovejo/Documents/Xpert-group/Cursos XpertGroup/Certificacion GOOGLE automatizacion python/C_GOOGLE_CURSO2"
+
 #### Consultar ruta actual: comando pwd:
 
 
