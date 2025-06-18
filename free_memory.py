@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 
+
 def main():
-    pass
+    """El método main encapsula el procedimiento de lógica del proyecto y lo lanza"""
+
 
 main()
