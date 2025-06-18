@@ -2,7 +2,7 @@
 # Guía de estudio: Git
 
 **Estado:** Traducido automáticamente del Inglés  
-**Información:** Este elemento incluye contenido que aún no se tradujo a tu idioma preferido. .
+**Información:** Este elemento incluye contenido que aún no se tradujo a tu idioma preferido.
 
 ---
 
