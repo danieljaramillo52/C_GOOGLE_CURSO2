@@ -123,4 +123,3 @@ Automatic merge failed; fix conflicts and then commit the result.
 ``` 
 
 Por lo que debemos resovler el conflicto para que el merge siga adelante. 
-
