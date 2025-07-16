@@ -111,4 +111,15 @@ las ramas divergen porque el cambio realizado en el main "**main**" por el colab
 
 Vamos a intentar traer los cambios del repo remoto primero: 
 
+## Al intentar fusionar las ramas: 
 
+```bash
+git merge main
+Auto-merging Curso 3 Git/Ramas/conflicto_rama_repo_remoto.md
+CONFLICT (add/add): Merge conflict in Curso 3 Git/Ramas/conflicto_rama_repo_remoto.md
+Auto-merging free_memory.py
+CONFLICT (content): Merge conflict in free_memory.py
+Automatic merge failed; fix conflicts and then commit the result.
+``` 
+
+Por lo que debemos resovler el conflicto para que el merge siga adelante. 
