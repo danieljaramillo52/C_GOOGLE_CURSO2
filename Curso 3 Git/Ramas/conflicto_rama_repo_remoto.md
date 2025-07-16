@@ -99,3 +99,16 @@ def suma_elementos(num1: int, num2: int):
 
 ```
 
+Luego de consginar cambios, podemos ver que no estamos del todo sincronizadso entre ramas. 
+
+git switch main
+Switched to branch 'main'
+Your branch and 'origin/main' have diverged,
+and have 1 and 1 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+las ramas divergen porque el cambio realizado en el main "**main**" por el colaborador no está en mi rama **main** y yo tengo un cambio en la rama remota. 
+
+Vamos a intentar traer los cambios del repo remoto primero: 
+
+

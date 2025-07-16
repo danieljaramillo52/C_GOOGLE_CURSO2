@@ -7,11 +7,11 @@ def main():
 
 main()
 
-def suma_elementos(elemento1: int, elemento2: int):
-        """Suma dos elementos 
-
+def suma_elementos(num1: int, num2: int):
+        """Suma dos elementos
+        
         Args:
-            elemento1 (int): primer elemento a sumar 
-            elemento2 (int): segundo elemento a sumar
+            num1 (int): primer elemento a sumar
+            num2 (int): segundo número a sumar
         """
-        return elemento1 + elemento2
+        return num1 + num2
