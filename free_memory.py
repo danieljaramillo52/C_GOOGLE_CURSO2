@@ -21,7 +21,7 @@ def Multiplicacion_elementos(num1: int, num2: int):
         
         Args:
             num1 (int): primer elemento a multiplicar
-            num2 (int): segundo número a multiplicar
+            num2 (int): segundo elemento a multiplicar
         """
         return num1 * num2
 
