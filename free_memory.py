@@ -24,3 +24,4 @@ def Multiplicacion_elementos(num1: int, num2:int):
             num2 (int): segundo número a multiplicar
         """
         return num1 * num2
+

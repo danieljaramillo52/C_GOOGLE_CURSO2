@@ -124,3 +124,80 @@ Automatic merge failed; fix conflicts and then commit the result.
 
 Por lo que debemos resovler el conflicto para que el merge siga adelante. 
 
+# Git fetch
+
+Descarga los cambios del repostorio remoto, pero no los combina con el repositorio actual, por lo tanto **NO** genera conflictos. Solo descarga la información. 
+
+# Git rebase 
+
+Ya sabemos que aplana el historial toma la rama original
+
+A---B---C Del remoto. 
+     
+     D--E
+
+Y los "reaplica" sobre "C"
+
+A--B--C--D'--E'
+
+**¿Cuando usar git rebase?**
+Mantener un historial lineal.
+
+Estas colaborando y ya compartiste los cambios
+
+Antes de hacer ``push`` para limpiar tu historial. 
+
+### No usar **rebase**
+
+En ramas compartidas si ya hicistew push, a menos que todos estén cordinados. Puede causar conflictos al forzar el historial. 
+
+(Vamos a intentarlo)
+
+```git rebase origin/main```
+
+Se abrirá el editor de VSCode para solucionar el conflicto en cuestión. Posteriormente deberemos continuar el rebase. 
+
+```git rebase --continue```
+
+✅ ¿Qué pasó?
+Ejecutaste git rebase origin/main
+
+Git:
+
+Descargó los commits de origin/main
+
+"Reescribió" tus commits locales para aplicarlos encima del historial remoto
+
+Posiblemente tuviste conflictos → los resolviste
+
+Al terminar, tu rama ahora tiene un historial lineal y actualizado con los cambios del remoto.
+
+📌 Antes del rebase:
+
+origin/main: A---B---C
+tu rama:             \---D---E
+
+📌 Después del rebase:
+
+tu rama (actual): A---B---C---D'---E'
+
+Tus commits (D y E) fueron reaplicados encima de origin/main, con nuevos IDs (D', E').
+
+🎯 ¿Qué debes hacer ahora?
+
+🔁 Si ya habías hecho git push antes del rebase:
+Ahora el historial de tu rama ha cambiado. Entonces, para actualizar el remoto, debes forzar el push:
+
+```bash
+git push --force
+```
+⚠️ Esto sobreescribe el historial remoto con tu nuevo historial reescrito.
+
+✅ Si aún no habías hecho push:
+Solo haz:
+
+```bash
+git push
+```
+Y no necesitas forzar nada.
+
