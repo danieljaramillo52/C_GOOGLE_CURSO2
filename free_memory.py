@@ -16,12 +16,13 @@ def suma_elementos(num1: int, num2: int):
         """
         return num1 + num2
 
-def Multiplicacion_elementos(num1: int, num2:int):
-        """Multiplica dos elementos
-
+def Multiplicacion_elementos(num1: int, num2: int):
+        """Multiplica dos elementos diferentes
+        
         Args:
             num1 (int): primer elemento a multiplicar
             num2 (int): segundo número a multiplicar
         """
         return num1 * num2
+
 
