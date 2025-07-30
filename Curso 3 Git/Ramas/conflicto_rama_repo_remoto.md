@@ -250,3 +250,5 @@ git rebase --continue
 
 3. No crea ramas paralelas innecesarias.
 
+
+
