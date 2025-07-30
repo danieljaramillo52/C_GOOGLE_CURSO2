@@ -251,4 +251,49 @@ git rebase --continue
 3. No crea ramas paralelas innecesarias.
 
 
+# Nuevo procedimiento: 
 
+
+```bash
+on\C_GOOGLE_CURSOS> git fetch
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (1/1), done.
+remote: Total 3 (delta 2), reused 3 (delta 2), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 323 bytes | 26.00 KiB/s, done.
+From https://github.com/danieljaramillo52/C_GOOGLE_CURSO2
+   6d2ccfc..5332814  main       -> origin/main
+```
+Primero el fetch.
+
+```bash
+PS C:\Users\ovejo\Documents\Xpert-group\Cursos XpertGroup\Certificacion GOOGLE automatizacion python\C_GOOGLE_CURSOS> git rebase origin/main
+Auto-merging free_memory.py
+CONFLICT (content): Merge conflict in free_memory.py
+error: could not apply 98a5c10... Cambio comiteado solo para generar un conflicto
+hint: Resolve all conflicts manually, mark them as resolved with
+hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
+hint: You can instead skip this commit: run "git rebase --skip".
+hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+Could not apply 98a5c10... Cambio comiteado solo para generar un conflicto
+```
+
+**git rebase origin/main** Luego este el conflicto por tener un commit en local que genera conflicto con lo traido del remoto.
+
+```bash
+PS C:\Users\ovejo\Documents\Xpert-group\Cursos XpertGroup\Certificacion GOOGLE automatizacion python\C_GOOGLE_CURSOS> git rebase --continue 
+```
+
+Posterior a su solución continuamos con el rebase
+
+
+Notemos que al hacer un **git pull** es más seguro cuando sabemos que iniciamos nuestro proceso de trabajo. Ahora con la configuración de rebase podemos resolver las cosas, decidir, hacer un commit y lanzar la definitva al repo remoto 
+
+
+##### **continuamos con el rebase**
+
+Luego de esto debemos hacer un commit y luego un push para actualizar el rémoto. 
+
+Notemos: 
+
+![Solucion de conflictos sin ramas innecesarias](/Curso%203%20Git/Ramas/sol_conflict_sin_ramas_innecesarias.png)
