@@ -201,3 +201,52 @@ git push
 ```
 Y no necesitas forzar nada.
 
+
+### Cambio en la configuración de git para evitar ramas "Rosadas" (Por conflictos de merge.)
+
+La configuación por defecto de un ``git pull`` es: 
+
+```bash
+git fetch
+git merge origin/main
+```
+
+Por lo tanto fuerza directamente los cambios hasta que encuentra un conflicto. 
+
+Luego nos pone a resolverlo. Una vez resuelto genera una rama divergente. 
+
+![Imagen rama_diverente NO CREADA](/Curso%203%20Git/Ramas/Rama_divergente_NO_CREADA.png)
+
+
+Podemos sin embargo **``Cambiar esta configuración, así evitamos que se creen estas ramas adicionales``**
+
+Utilizamos: 
+
+```bash
+git config --global pull.rebase true
+```
+
+### 🧠 Entonces, ¿qué logras con esto?
+
+✅ 1. Conflictos igual se detectan — pero uno por uno
+
+Cuando haces pull con rebase, Git aplica tus commits uno por uno sobre origin/main.
+
+Si hay un conflicto en uno de ellos, Git lo pausa inmediatamente y te deja resolverlo.
+
+Luego continúas con:
+
+```bash
+git rebase --continue
+```
+
+🔁 Esto no cambia tu momento actual en la historia del proyecto, solo te hace reordenar tus cambios como si hubieran venido después.
+
+### ❌ ¿Qué evita esto?
+
+1. Evita un commit de merge automático y feo.
+
+2. Evita una desviación visual en el historial (como la rama rosada)
+
+3. No crea ramas paralelas innecesarias.
+
