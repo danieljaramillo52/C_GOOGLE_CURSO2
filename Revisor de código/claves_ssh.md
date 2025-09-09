@@ -109,7 +109,7 @@ Luego podremos verla.
 
 ### 5. **Probar conexión**
 
-ssh -T gitgithub.com
+ssh -T git@github.com
 
 NOTA: Al ser la primera vez podemos ver un mensaje:
 
